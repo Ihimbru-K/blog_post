@@ -68,13 +68,26 @@ class BlogDetailScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(blog.title, style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
-                SizedBox(height: 8),
-                Text(blog.subTitle, style: TextStyle(fontSize: 18, fontStyle: FontStyle.italic)),
+                Row(children: [
+                  const Text("blog title :", style: TextStyle(fontSize: 12),),
+                  Text(blog.title, style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
+                ],),
+                const SizedBox(height: 8),
+                Row(children: [
+                  const Text("subtitle :", style: TextStyle(fontSize: 12),),
+                  Text(blog.subTitle, style: TextStyle(fontSize: 18, fontStyle: FontStyle.italic)),
+
+                ],),
+
                 SizedBox(height: 16),
-                Text(blog.body, style: TextStyle(fontSize: 16)),
+                Row(children: [
+                  const Text("body :", style: TextStyle(fontSize: 12),),
+                  Text(blog.body, style: TextStyle(fontSize: 16))
+
+                ],)
+                ,
                 SizedBox(height: 16),
-                Text('Created on: ${blog.dateCreated}', style: TextStyle(color: Colors.grey)),
+                Text('Created on: ${blog.dateCreated}', style: TextStyle(color: Colors.grey, fontSize: 12)),
               ],
             ),
           );

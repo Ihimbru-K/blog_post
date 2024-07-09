@@ -34,6 +34,8 @@ query fetchAllBlogs {
 //   }
 // }
 // """;
+
+
 const String getBlog = r'''
 query getBlog($blogId: String!) {
   blogPost(blogId: $blogId) {

@@ -11,12 +11,12 @@ class BlogListScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Blog Posts'), centerTitle: true, elevation: 3,),
+      appBar: AppBar(title: const Text('Blog Posts'), centerTitle: true, elevation: 3,),
       body: Query(
         options: QueryOptions(document: gql(fetchAllBlogs)),
         builder: (QueryResult result, {VoidCallback? refetch, FetchMore? fetchMore}) {
           if (result.isLoading) {
-            return Center(child: CircularProgressIndicator());
+            return const Center(child: CircularProgressIndicator());
           }
 
           if (result.hasException) {
@@ -52,7 +52,7 @@ class BlogListScreen extends StatelessWidget {
             MaterialPageRoute(builder: (context) => BlogFormScreen()),
           );
         },
-        child: Icon(Icons.add),
+        child: Text("Add blog"),
       ),
     );
   }
