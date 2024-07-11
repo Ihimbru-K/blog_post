@@ -1,4 +1,4 @@
-# blog_post
+# blog_post.
 
 # Mobile Developer Technical Assessment: Simple Blog App with GraphQL Integration
 
